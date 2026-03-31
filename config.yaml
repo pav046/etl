@@ -1,0 +1,28 @@
+search:
+  area: 1
+  text: "data engineer"
+  per_page: 20
+  pages: 3
+  order_by: "publication_time"
+  only_with_salary: false
+
+http:
+  timeout: 30
+  user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
+
+database:
+  url: "postgresql+psycopg2://postgres:123@localhost:5432/postgres"
+  schema: "etl"
+  table: "hh_search"
+
+logging:
+  level: "INFO"
+  file_name: "logs/hh_etl.log"
+
+retry:
+  attempts: 3
+  wait_seconds: 5
+
+filesystem:
+  output_dir: "data"
+  compression: "snappy"
