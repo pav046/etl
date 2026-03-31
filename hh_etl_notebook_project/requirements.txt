@@ -1,0 +1,7 @@
+requests
+polars
+sqlalchemy
+psycopg2-binary
+tenacity
+pendulum
+pyyaml
